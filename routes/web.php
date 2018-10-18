@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LandingPageController');
+
+Route::get('/calculate', 'CalculationController@index');
+
+Route::get('/outcome/{caloricIntake}', 'CalculationController@calculate');
