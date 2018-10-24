@@ -8,11 +8,11 @@ class CalculationController extends Controller
 {
     public function index()
     {
-        return 'Complete the form below';
+        return view('caloricForm');
     }
 
-    public function calculate($caloricIntake)
+    public function calculate()
     {
-        return 'Your recommended caloric intake is: ' .$caloricIntake;
+        return view('outcome');
     }
 }

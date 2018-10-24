@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Caloric Intake Calculator</h1>
+    <h1>{{config('app.name')}}</h1>
 
-    <p>Ready to jump start a healthier life!? YOu have come to the right place</p>
+    <p>Ready to jump start a healthier life!? You have come to the right place</p>
 @endsection
