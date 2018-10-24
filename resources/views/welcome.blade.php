@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <title>Project 3 - Chantal Thomas</title>
-    <meta charset='utf-8'>
+@extends('layouts.master')
 
-</head>
-<body>
-<h1>Project 3</h1>
+@section('content')
+    <h1>Caloric Intake Calculator</h1>
 
-</body>
-</html>
+    <p>Ready to jump start a healthier life!? YOu have come to the right place</p>
+@endsection
