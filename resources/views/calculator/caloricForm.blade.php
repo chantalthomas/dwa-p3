@@ -3,7 +3,7 @@
 @section('content')
 
     <h1>Caloric Calculator</h1>
-    <form action='//calculate-process/' method='get' class='inputContainer'>
+    <form action='/calculate-process/' method='get' class='inputContainer'>
         <fieldset class='form-group'>
             <legend>Height</legend>
             <p>Enter height in feet and inches</p>

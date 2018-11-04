@@ -6,9 +6,16 @@ use Illuminate\Http\Request;
 
 class CalculationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('calculator.caloricForm');
+        return view('calculator.caloricForm')->with([
+            'feet' => $request->session()->get('feet', ''),
+            'inches' => $request->session()->get('inches', ''),
+            'weight' => $request->session()->get('weight', ''),
+            'age' => $request->session()->get('age', ''),
+            'gender' => $request->session()->get('gender', ''),
+            'exerciseAmount' => $request->session()->get('exerciseAmount', ''),
+        ]);
     }
 
     #convert weight to kilograms
@@ -28,10 +35,16 @@ class CalculationController extends Controller
     }
 
 #Mifflin Equation
-    public function mifflinEquation($weight, $feet, $inches, $age)
+    public function mifflinEquation( Request $request)
     {
-        global $gender;
-        global $exerciseAmount;
+        #store user input in variable
+        $feet = $request->input('feet', null);
+        $inches = $request->input('inches', null);
+        $weight = $request->input('weight', null);
+        $age = $request->input('age', null);
+        $gender = $request->input('gender', null);
+        $exerciseAmount = $request->input('exerciseAmount', null);
+
         #if the user is a woman
         if ($gender == 'female') {
             if ($exerciseAmount == 'none') {
@@ -80,6 +93,15 @@ class CalculationController extends Controller
                 return $caloricIntake;
             }
         }
+
+        return redirect('/calculate')->with([
+            'feet' => $feet,
+            'inches' => $inches,
+            'weight' => $weight,
+            'age' => $age,
+            'gender' => $gender,
+            'exerciseAmount' => $exerciseAmount,
+        ]);
     }
 }
 
