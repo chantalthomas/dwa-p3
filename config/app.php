@@ -2,6 +2,11 @@
 
 return [
 
+    'nav' => [
+        '/' => 'Home',
+        '/calculate' => 'Caloric Calculator',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

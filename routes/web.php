@@ -15,4 +15,7 @@ Route::get('/', 'LandingPageController');
 
 Route::get('/calculate', 'CalculationController@index');
 
-Route::get('/outcome/{caloricIntake}', 'CalculationController@calculate');
+Route::get('/calculate-process/', 'CalculationController@mifflinEquation'); # <-- NEW 2 of 2
+
+
+

@@ -1,28 +1,29 @@
 @extends('layouts.master')
 
 @section('content')
+
     <h1>Caloric Calculator</h1>
-    <form action='calculateCaloricIntake.php' method='get' class='inputContainer'>
+    <form action='//calculate-process/' method='get' class='inputContainer'>
         <fieldset class='form-group'>
             <legend>Height</legend>
             <p>Enter height in feet and inches</p>
             <label>
-                <input type='number' name='feet' value='<?php if (isset($feet)) echo $feet ?>'>
+                <input type='number' name='feet' id='feet 'value='{{ old('feet') }}'>
             </label>
             <label>
-                <input type='number' name='inches' value='<?php if (isset($inches)) echo $inches ?>'>
+                <input type='number' name='inches' id='inches' value='<?php if (isset($inches)) echo $inches ?>'>
             </label>
         </fieldset>
         <fieldset class='form-group'>
             <legend>Weight</legend>
             <label>
-                <input type='number' name='weight' value='<?php if (isset($weight)) echo $weight ?>'>
+                <input type='number' name='weight' id='weight 'value='<?php if (isset($weight)) echo $weight ?>'>
             </label>
         </fieldset>
         <fieldset class='form-group'>
             <legend>Age</legend>
             <label>
-                <input type='number' name='age' value='<?php if (isset($age)) echo $age ?>'>
+                <input type='number' name='age' id='age' value='<?php if (isset($age)) echo $age ?>'>
             </label>
         </fieldset>
         <fieldset class='form-group'>
@@ -52,3 +53,4 @@
         </fieldset>
         <input type="submit" class='submitButton' name='submit' value='S U B M I T'>
     </form>
+@endsection
