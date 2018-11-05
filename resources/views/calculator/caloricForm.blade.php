@@ -42,6 +42,7 @@
         <fieldset class='form-group'>
             <legend>Fitness Level</legend>
             <label>
+            <div class='dropdown'>
                 <select name="exerciseAmount">
                     <option value='none' <?php echo (isset($exerciseAmount) && $exerciseAmount == 'none') ? 'selected' : ''; ?>>Little to No Exercise</option>
                     <option value='slightly' <?php echo (isset($exerciseAmount) && $exerciseAmount == 'slightly') ? 'selected' : ''; ?>>Slightly Active</option>
@@ -49,8 +50,15 @@
                     <option value='active' <?php echo (isset($exerciseAmount) && $exerciseAmount == 'active') ? 'selected' : ''; ?>>Active</option>
                     <option value='veryActive' <?php echo (isset($exerciseAmount) && $exerciseAmount == 'veryActive') ? 'selected' : ''; ?>>Very Active</option>
                 </select>
+            </div>
             </label>
         </fieldset>
         <input type="submit" class='submitButton' name='submit' value='S U B M I T'>
     </form>
+
+    <div class='outputContainer'>
+        <?php if (isset($caloricIntake)): ?>
+        Your caloric intake is: <?= round($caloricIntake, 0, PHP_ROUND_HALF_UP) ?>
+        <?php endif; ?>
+    </div>
 @endsection

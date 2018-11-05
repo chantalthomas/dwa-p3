@@ -94,6 +94,7 @@ class CalculationController extends Controller
             }
         }
 
+        #redirect back to form page
         return redirect('/calculate')->with([
             'feet' => $feet,
             'inches' => $inches,
@@ -101,6 +102,19 @@ class CalculationController extends Controller
             'age' => $age,
             'gender' => $gender,
             'exerciseAmount' => $exerciseAmount,
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        # Validate the request data
+        $request->validate([
+            'feet' => 'required|digits',
+            'inches' => 'required|digits',
+            'weight' => 'required|digits',
+            'age' => 'required|digits',
+            'gender' => 'required',
+            'exerciseAmount' => 'required'
         ]);
     }
 }

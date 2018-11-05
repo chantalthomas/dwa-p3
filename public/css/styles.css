@@ -9,12 +9,20 @@ header {
     margin-top: 20px;
 }
 
+h1,
+nav,
+legend,
+.submitButton{
+    font-family: 'Playfair Display', serif;
+}
+
 section {
     max-width: 600px;
     width: 100%;
     margin: auto;
     padding-bottom: 20px;
     text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /*----------------------------------------------------
@@ -48,5 +56,73 @@ nav ul li a:link {
 }
 
 nav ul li a:hover {
-    color: #18bc9c; /* teel */
+    color: #e67300;
 }
+
+/*----------------------------------------------------
+Caloric Intake Form
+-----------------------------------------------------*/
+select {
+    font-family: 'Playfair Display', serif;
+    font-weight: 200;
+    padding: 8px 24px 8px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: #e6e6e6;
+    width: auto;
+    max-width: 100%;
+    border-radius: 2px;
+
+}
+
+.dropdown {
+    position: relative;
+    background-color: #e6e6e6;
+    width: auto;
+    max-width: 100%;
+    border-radius: 2px;
+}
+select {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 100%;
+    padding: 8px 24px 8px 10px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:active,
+select:focus {
+     outline: none;
+     box-shadow: none;
+}
+
+.dropdown:after {
+     content: " ";
+     position: absolute;
+     top: 50%;
+     margin-top: -2px;
+     right: 8px;
+     width: 0;
+     height: 0;
+     border-left: 5px solid transparent;
+     border-right: 5px solid transparent;
+     border-top: 5px solid #aaa;
+}
+
+.submitButton {
+    border-color: #ffa366;
+    box-shadow: 0 0 40px 40px #ffa366 inset, 0 0 0 0 #ffa366;
+    transition: all 150ms ease-in-out;
+    border-radius: 2px;
+    padding: 1rem;
+}
+.submitButton:hover {
+     box-shadow: 0 0 10px 0 #ffa366 inset, 0 0 10px 4px #ffa366;
+ }
+

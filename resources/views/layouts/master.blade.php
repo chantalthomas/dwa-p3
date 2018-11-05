@@ -9,6 +9,9 @@
 
     <link href='/css/styles.css' rel='stylesheet'>
     <link href='/css/normalize.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
     {{-- CSS specific to a given page/child view can be included via a stack --}}
     @stack('head')
 </head>
