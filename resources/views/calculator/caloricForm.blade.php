@@ -9,6 +9,7 @@
             <p>Enter height in feet and inches</p>
             <label>
                 <input type='number' name='feet' id='feet 'value='<?php if (isset($feet)) echo $feet ?>'>
+                @include('modules.field-error', ['field' => 'feet'])
             </label>
             <label>
                 <input type='number' name='inches' id='inches' value='<?php if (isset($inches)) echo $inches ?>'>
