@@ -8,6 +8,7 @@
 + [Body Font](https://fonts.google.com/specimen/Playfair+Display?selection.family=Playfair+Display)
 + [Select Styling](https://codepen.io/jpdanks/pen/rEJhK)
 + [Submit Button Styling](https://codepen.io/anon/pen/YRPVOj)
++ [Retain radio and select user input with old()](https://laracasts.com/discuss/channels/requests/how-to-keep-the-value-of-a-radio-button-if-redirect-back)
 
 ## 3 Unique inputs
 1. Number Input - used to input weight, height, and age
