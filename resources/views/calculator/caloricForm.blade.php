@@ -32,7 +32,10 @@
         </fieldset>
         <fieldset class='form-group'>
             <legend>Gender</legend>
-            <input type='radio' name='gender' id='female' value='female' {{(old('gender') == 'female') ? 'checked' : '' }}>
+            <input type='radio'
+                   name='gender'
+                   id='female'
+                   value='female' {{(old('gender') == 'female') ? 'checked' : '' }}>
             <label for='female'>Female</label><br/>
             <input type='radio' name='gender' id='male' value='male' {{(old('gender') == 'male') ? 'checked' : '' }}>
             <label for='male'>Male</label><br/>
@@ -41,15 +44,13 @@
         <fieldset class='form-group'>
             <legend>Fitness Level</legend>
             <label>
-                <div class='dropdown'>
-                    <select name="exerciseAmount">
-                        <option value='none' {{(old('exerciseAmount') == 'none') ? 'selected' : '' }}>Little to No Exercise</option>
-                        <option value='slightly' {{(old('exerciseAmount') == 'slightly') ? 'selected' : '' }}>Slightly Active</option>
-                        <option value='moderate' {{(old('exerciseAmount') == 'moderate') ? 'selected' : '' }}>Moderately Active</option>
-                        <option value='active' {{(old('exerciseAmount') == 'active') ? 'selected' : '' }}>Active</option>
-                        <option value='veryActive' {{(old('exerciseAmount') == 'veryActive') ? 'selected' : '' }}>Very Active</option>
-                    </select>
-                </div>
+                <select name="exerciseAmount">
+                    <option value='none' {{(old('exerciseAmount') == 'none') ? 'selected' : '' }}>Little to No Exercise</option>
+                    <option value='slightly' {{(old('exerciseAmount') == 'slightly') ? 'selected' : '' }}>Slightly Active</option>
+                    <option value='moderate' {{(old('exerciseAmount') == 'moderate') ? 'selected' : '' }}>Moderately Active</option>
+                    <option value='active' {{(old('exerciseAmount') == 'active') ? 'selected' : '' }}>Active</option>
+                    <option value='veryActive' {{(old('exerciseAmount') == 'veryActive') ? 'selected' : '' }}>Very Active</option>
+                </select>
                 @include('modules.field-error', ['field' => 'exerciseAmount'])
             </label>
         </fieldset>
