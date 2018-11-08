@@ -13,18 +13,21 @@
             </label>
             <label>
                 <input type='number' name='inches' id='inches' value='{{ old('inches') }}'>
+                @include('modules.field-error', ['field' => 'inches'])
             </label>
         </fieldset>
         <fieldset class='form-group'>
             <legend>Weight</legend>
             <label>
                 <input type='number' name='weight' id='weight' value='{{ old('weight') }}'>
+                @include('modules.field-error', ['field' => 'weight'])
             </label>
         </fieldset>
         <fieldset class='form-group'>
             <legend>Age</legend>
             <label>
                 <input type='number' name='age' id='age' value='{{ old('age') }}'>
+                @include('modules.field-error', ['field' => 'age'])
             </label>
         </fieldset>
         <fieldset class='form-group'>
@@ -33,6 +36,7 @@
             <label for='female'>Female</label><br/>
             <input type='radio' name='gender' id='male' value='male' {{(old('gender') == 'male') ? 'checked' : '' }}>
             <label for='male'>Male</label><br/>
+            @include('modules.field-error', ['field' => 'gender'])
         </fieldset>
         <fieldset class='form-group'>
             <legend>Fitness Level</legend>
@@ -46,6 +50,7 @@
                         <option value='veryActive' {{(old('exerciseAmount') == 'veryActive') ? 'selected' : '' }}>Very Active</option>
                     </select>
                 </div>
+                @include('modules.field-error', ['field' => 'exerciseAmount'])
             </label>
         </fieldset>
         <input type="submit" class='submitButton' name='submit' value='S U B M I T'>
@@ -56,4 +61,9 @@
             Your caloric intake is: {{round($caloricIntake, 0)}}
         @endif
     </div>
+    @if(count($errors) > 0)
+        <ul class='alert alert-danger'>
+            Please correct the errors above.
+        </ul>
+    @endif
 @endsection

@@ -65,6 +65,19 @@ class CalculationController extends Controller
                 $caloricIntake = ((10 * $this->toKilograms($weight)) + (6.25 * $this->toCentimeters($feet, $inches)) - (5 * $age) + 5) * 1.9;
             }
         }
+
+        # Validate the request data
+
+
+        $this->validate($request, [
+            'feet' => 'required|digits_between:0,2',
+            'inches' => 'required|digits_between:0,2',
+            'weight' => 'required|digits_between:0,3',
+            'age' => 'required|digits_between:0,3',
+            'gender' => 'required',
+            'exerciseAmount' => 'required'
+        ]);
+
         $request->flash();
         #redirect back to form page
         return redirect('/calculate')->with([

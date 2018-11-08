@@ -26,6 +26,16 @@ section {
 }
 
 .outputContainer{
+    font-size: large;
+    font-weight: bold;
+}
+
+.alert{
+    margin-top: 20px;
+}
+
+.error{
+    color: #e60000;
 }
 
 /*----------------------------------------------------
