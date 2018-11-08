@@ -12,7 +12,7 @@ header {
 h1,
 nav,
 legend,
-.submitButton{
+.submitButton {
     font-family: 'Playfair Display', serif;
 }
 
@@ -25,16 +25,16 @@ section {
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.outputContainer{
+.outputContainer {
     font-size: 50px;
     font-weight: bold;
 }
 
-.alert{
+.alert {
     margin-top: 20px;
 }
 
-.error{
+.error {
     color: #e60000;
 }
 
@@ -75,6 +75,7 @@ nav ul li a:hover {
 /*----------------------------------------------------
 Caloric Intake Form
 -----------------------------------------------------*/
+/*Dropdown styling; the custom dropdown  did not pass the html validator leaving this here to work on this post grading
 select {
     font-family: 'Playfair Display', serif;
     font-weight: 200;
@@ -97,6 +98,7 @@ select {
     max-width: 100%;
     border-radius: 2px;
 }
+
 select {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 1rem;
@@ -111,23 +113,23 @@ select {
 
 select:active,
 select:focus {
-     outline: none;
-     box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 
 .dropdown:after {
-     content: " ";
-     position: absolute;
-     top: 50%;
-     margin-top: -2px;
-     right: 8px;
-     width: 0;
-     height: 0;
-     border-left: 5px solid transparent;
-     border-right: 5px solid transparent;
-     border-top: 5px solid #aaa;
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
 }
-
+*/
 .submitButton {
     border-color: #ffa366;
     box-shadow: 0 0 40px 40px #ffa366 inset, 0 0 0 0 #ffa366;
@@ -135,7 +137,8 @@ select:focus {
     border-radius: 2px;
     padding: 1rem;
 }
+
 .submitButton:hover {
-     box-shadow: 0 0 10px 0 #ffa366 inset, 0 0 10px 4px #ffa366;
- }
+    box-shadow: 0 0 10px 0 #ffa366 inset, 0 0 10px 4px #ffa366;
+}
 
