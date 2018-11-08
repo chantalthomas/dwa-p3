@@ -22,4 +22,4 @@
 + N/A
 
 ## Notes for instructor
-+ N/A
++ 404 custom error page was created
